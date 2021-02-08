@@ -85,7 +85,7 @@ function renderPrice() {
   const receiptTag = document.querySelector('.panel.price > ul') ;
   const totalPrice = document.querySelector('.panel.price > strong') ;
   let receipt = ''
-  let price = 10;
+  let price = basePrice;
   for (let option in state) {
     receipt += state[option] ? '<li>$'+ ingredients[option].price + ' ' + ingredients[option].name+'</li>' : '' ;
     price += state[option] ? ingredients[option].price : 0;
